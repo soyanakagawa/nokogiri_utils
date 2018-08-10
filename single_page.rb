@@ -11,7 +11,6 @@ xpath = '//*[@id="primary"]/main/section[2]/div/div/a/@href'
 doc = Nokogiri::HTML(open(url))
 
 puts "# URLs"
-# doc.xpath('//*[@id="primary"]/main/section[2]/div/div/a/@href').each do |link|
 doc.xpath(xpath).each do |link|
   puts link.value
 end
